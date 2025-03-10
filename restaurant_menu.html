@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabowy | Restaurant Menu</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, white, red);
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+<body>
+    <header class="header">
+        <div style="text-align: center"><img src="images/logo.png" alt="header" id="header-img" /></div>
+        <hr>
+        <div style="text-align: center"><h1>Shabowy Restaurant Website</h1></div>
+        <nav>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#order-form">ORDER FORM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section__container menu__container" id="menu">
+                <h2 id="menu">Menu</h2>
+
+                <article>
+                    <div class="menu__item">
+                        <h3>Pierogi</h3>
+                        <img src="images/pierogi.jpg" alt="pierogi" id="pierogi-img" width="200" height=""200/>
+                        <p><b>Price: $10</b></p>
+                        <p>Traditional dumplings filled with various ingredients such as cabbage and mushrooms, meat, sweet cottage cheese, or seasonal fruits. Served boiled or fried, often with butter or crispy bacon bits.</p>
+                        <button class="availability__btn">See availability</button>
+                    </div>
+                </article>
+                <br>
+                <article>
+                    <div class="menu__item">
+                        <h3>Schabowy</h3>
+                        <img src="images/schabowy.jpg" alt="schabowy" id="schabowy-img" width="200" height=""200/>
+                        <p><b>Price: $15</b></p>
+                        <p>A classic breaded pork cutlet, pan-fried until golden, served with boiled or mashed potatoes and a side of salad.</p>
+                        <button class="availability__btn">See availability</button>
+                    </div>
+                </article>
+                <br>
+                <article>
+                    <div class="menu__item">
+                        <h3>Zurek</h3>
+                        <img src="images/zurek.jpg" alt="zurek" id="zurek-img" width="200" height=""200/>
+                        <p><b>Price: $8</b></p>
+                        <p>A tangy rye soup served with white sausage, hard-boiled egg, and potatoes. Often presented in a bread bowl, adding a rustic and authentic touch.</p>
+                        <button class="availability__btn">See availability</button>
+                    </div>
+                </article>
+        </section>
+
+        <section class="section__container order__container" id="order-form">
+            <h2 id="order">Place Your Order</h2>
+            <p>Enter the number of items ordered</p>
+            <form>
+            <div class = "pierogi-order">
+                <label for="pierogi">Pierogi</label>
+                <input type="number" id="pierogi" name="pierogi" min="0" max="10">
+                <p style="display:inline">Select filling:</p>
+                <select name="filling" id="filling">
+                    <option value="cabbage">Cabbage and mushrooms</option>
+                    <option value="meat">Meat</option>
+                    <option value="cheese">Sweet cottage cheese</option>
+                    <option value="fruits">Seasonal fruits</option>
+                </select>
+            </div>
+
+            <div class = "schabowy-order">
+                <label for="schabowy">Schabowy</label>
+                <input type="number" id="schabowy" name="schabowy" min="0" max="10">
+                <p style="display:inline">Select potatoes:</p>
+                <select name="potatoes" id="potatoes">
+                    <option value="boiled">Boiled</option>
+                    <option value="mashed">Mashed</option>
+                </select>
+            </div>
+
+            <div class = "zurek-order">
+                <label for="zurek">Zurek</label>
+                <input type="number" id="zurek" name="zurek" min="0" max="10">
+                <p style="display:inline">Select way of serving:</p>
+                <input type="radio" id="bowl" name="zurek-serving" value="bowl">
+                <label for="bowl">Bowl</label>
+                <input type="radio" id="bread" name="zurek-serving" value="bread">
+                <label for="bread">Bread (+$2)</label>
+            </div>
+            
+            <div class = "allergies">
+                <label for="allergies">If you have any allergies, please leave this information here and we will take it into account in your order</label><br>
+                <textarea id="allergies" placeholder="Enter your allergens"></textarea>
+            </form>
+            </div>
+
+            <div class = "special-request">
+                <label for="special-request">If you have any special requests, please leave this information here and we will take it into account in your order</label><br>
+                <textarea id="special-request" placeholder="Enter your special requests"></textarea>
+            </div>
+
+            <br>
+            <input type="submit" value="Go To Checkout" id="checkout-btn">
+            
+        </section>
+    </main>
+
+
+    <hr>
+    <footer class="footer">
+        <div style="text-align: center"><p>&copy; 2025 Shabowy Restaurant. All rights reserved.</p></div>
+    </footer>
+
+</body>
+</html>
